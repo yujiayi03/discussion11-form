@@ -20,7 +20,7 @@ label {
   margin-bottom: 10px;
 }
 
-input[type="text"], 
+input[type="text"],
 input[type="email"],
 input[type="date"],
 select,
@@ -30,6 +30,43 @@ textarea {
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+.required-note {
+  color: #FFCB05;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.asterisk {
+  color: #FFCB05;
+  font-weight: bold;
+}
+
+/* Radio button flex layout */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.radio-option input[type="radio"] {
+  width: auto;
+  margin: 0;
+}
+
+.radio-group label {
+  margin-bottom: 0;
+  color: #ffffff;
 }
 
 input[type="submit"] {

@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,23 +18,24 @@
             improve resources and support for UMSI students.
         </p>
  
-        <!-- Uncomment the line below and connect to Formspree -->
-        <!-- <form action="" method="post"> -->
+        
+<!-- Uncommented the form and connected to Formspree -->
+        <form action="https://formspree.io/f/xyz123abc" method="POST">
 
         <fieldset>
             <legend>Student Information</legend>
 
             <label for="first-name">First Name:</label>
-            <input type="text" id="first-name" required>
+            <input type="text" id="first-name" name="first-name" required>
 
-            <label for="last-name">Last Name:</label>
-            <input type="text" name="last-name" required>
+            <label for="last-name">Last Name:*</label>
+            <input type="text" id="last-name" name="last-name" required>
 
-            <label for="email">Email Address:</label>
-            <input type="text" id="email"
+            <label for="email">Email Address:*</label>
+            <input type="email" id="email"
                    name="email" required>
 
-            <label for="program">Academic Program:</label>
+            <label for="program">Academic Program:*</label>
             <select id="program" name="program" required>
                 <option value="">Select your program</option>
                 <option value="bsi">BSI</option>
@@ -46,36 +47,51 @@
 
         </fieldset>
 
-        <div class="radio-group">
-            <p>Current or Most Recent Project Stage:</p>
+        <fieldset>
+            <legend>Project Stage</legend>
+            <div class="radio-group">
+                <p>Current or Most Recent Project Stage:</p>
 
-            <input type="radio" id="preparing"
-                   name="stage" value="preparing" required>
-            <label>Preparing for the Experience</label>
+                <div class="radio-option">
+                    <input type="radio" id="preparing"
+                           name="stage" value="preparing" required>
+                    <label for="preparing">Preparing for the Experience</label>
+                </div>
 
-            <input type="radio" id="starting"
-                   name="stage" value="starting">
-            <label for="starting">Starting the Experience</label>
+                <div class="radio-option">
+                    <input type="radio" id="starting"
+                           name="stage" value="starting">
+                    <label for="starting">Starting the Experience</label>
+                </div>
 
-            <input type="radio" id="during"
-                   name="stage" value="during">
-            <label for="during">During the Experience</label>
+                <div class="radio-option">
+                    <input type="radio" id="during"
+                           name="stage" value="during">
+                    <label for="during">During the Experience</label>
+                </div>
 
-            <input type="radio" id="ending"
-                   name="stage" value="ending">
-            <label for="ending">Ending the Experience</label>
+                <div class="radio-option">
+                    <input type="radio" id="ending"
+                           name="stage" value="ending">
+                    <label for="ending">Ending the Experience</label>
+                </div>
 
-            <input type="radio" id="after"
-                   name="stage" value="after">
-            <label for="after">After the Experience</label>
-        </div>
+                <div class="radio-option">
+                    <input type="radio" id="after"
+                           name="stage" value="after">
+                    <label for="after">After the Experience</label>
+                </div>
+            </div>
+        </fieldset>
 
         <fieldset>
             <legend>Your Feedback</legend>
 
-            <label for="feedback">Your Feedback:</label>
-            <textarea name="feedback" rows="5" required></textarea>
+            <label for="start-date">Project Start Date (optional):</label>
+            <input type="date" id="start-date" name="start-date">
 
+            <label for="feedback">Your Feedback:*</label>
+            <textarea id="feedback" name="feedback" rows="5" required></textarea>
         </fieldset>
 
         <input type="submit" value="Submit Feedback">
@@ -85,3 +101,12 @@
 </body>
 
 </html>
+$
+
+
+
+
+
+
+
+
